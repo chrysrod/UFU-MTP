@@ -66,6 +66,7 @@ int main()
 			printf("(");
 			conversor(num1);
 			printf(")");
+			num = ~num1;
 			printf(" : %i", num);
 			printf("(");
 			conversor(num);
