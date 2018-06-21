@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int pow(int exp)
+int exponencial(int exp)
 {
 	int pot = 10;
 	if(exp >= 2)
@@ -48,7 +48,7 @@ int main()
 	{
 		exp = j - i;
 		num = contemnum[i] - 48;
-		numint += num * pow(exp-1);
+		numint += num * exponencial(exp-1);
 		i++;
 	}
 	
