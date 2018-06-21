@@ -14,7 +14,7 @@ void conversor(int base_original, int base_convertida)
 	{
 		case 2:
 			printf("\nDigite o numero em binario: ");
- 			scanf("%s", &num_bin);
+ 			scanf("%s", num_bin);
  			break;
  		case 8:
  			printf("\nDigite o numero em octal: ");
@@ -165,7 +165,7 @@ int main()
     printf("\n###### Developed by: Chrystian Rodrigues Campos ########");
     printf("\n############### Matricula: 11721ECP006 #################\n");
     
-    while(true)
+    while(1)
 	{
 		printf("\n--------------------------------------------------------");
 		printf("\n|                     MENU PRINCIPAL                   |");
