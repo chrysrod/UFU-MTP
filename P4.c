@@ -30,7 +30,7 @@ int main()
     printf("\n--------------------------------------------------------\n");
 
 	printf("\nDigite uma sequencia de caracteres com numeros: ");
-	scanf("%s", &numero);
+	scanf("%s", numero);
 	getchar();
 	
 	printf("\nNumero inteiro: ");
