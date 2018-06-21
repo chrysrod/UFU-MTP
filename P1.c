@@ -13,7 +13,7 @@ int main()
     printf("\n###### Developed by: Chrystian Rodrigues Campos #######");
     printf("\n############### Matricula: 11721ECP006 ################\n");
     printf("\nInsira um numero em binario para verificar se e multiplo de 3: ");
-    scanf("%s", &binario);
+    scanf("%s", binario);
       
 	while(binario[i] != '\0')
     {
