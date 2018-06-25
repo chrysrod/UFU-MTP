@@ -3,43 +3,62 @@
 
 #include <stdio.h>
 
-int soma(int *termo1, int *termo2)
-{	
-	return (*termo2) + ((termo2==termo1) ? 0 : soma(termo1, termo2 - 1));
+int som(int vetor[20], int aux)
+{
+	if(aux == 0)
+		return 0;
+	else 
+	{
+		int somatorio = 0;
+
+		somatorio = soma(vetor, aux - 1);
+		
+		if(vetor[aux - 1] > 0)
+		{
+			somatorio =+ vetor[aux - 1];
+		}
+		
+		return somatorio;
+	}
 }
-	
-float divide(float termo1, float termo2)
-{	
-	return termo2/termo1;
+
+float med(int soma, float termos)
+{
+	float resultado;
+
+	resultado = soma / termos;
+
+	return resultado;
+}
+
+void preenche(int vetor[20])
+{
+	int i = 0;
+	for(i = 0; i < 20; i++)
+	{
+		vetor[i] = 0;
+	}
 }
 
 int main ()
 {
-	int indice = 0, tamanho = 0, vetor[20], *termo1, *termo2;
-	float j = 0, k = 0;
-	
-	printf("\nInsira um numero (5-20) que sera o tamanho do vetor: ");
-	do
-	{	
-		scanf("%d", &tamanho);
-	}while(tamanho < 5 || tamanho > 20);
-	
-	do{ 
-		vetor[indice] = 0; indice++; 
-	}while(indice < tamanho);
+	int vetor[20], i, soma, numeros;
+	float p;
+	printf("Insira a quantidade de numeros inteiros: ");
+	scanf("%d", &numeros);
+	preenche(vetor);
+	for(i = 0; i < numeros; i++)
+	{
+		printf("\nDigite o numero %d: ", i+1);
+		scanf("%d", &vetor[i]);
+		getchar();
 
-	indice = 0;
-	
-	while(indice < tamanho)
-	{	
-		printf("\nDigite o valor %d do vetor: ", indice+1);
-		scanf("%d", &vetor[indice]);	indice++;	}
-		termo1 = vetor;	
-		termo2 = vetor + tamanho - 1;
-		indice=tamanho;
-    	j = float(soma(termo1, termo2));
-    	k = float(indice);
-		printf("\n\n Media = %.1f", divide(indice, j));
-		return 0;
+		if(vetor[i] != 0)
+		{
+			p++;
+		}
 	}
+	soma = (som(vetor, i));
+	printf("\nA media dos numeros e: %.1f", med(soma, p));
+	return 0;
 }
