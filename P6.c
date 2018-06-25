@@ -44,12 +44,12 @@ int main ()
 {
 	int vetor[20], i, soma, numeros;
 	float p;
-	printf("Insira a quantidade de numeros inteiros: ");
+	printf("Digite a quantidade de numeros inteiros: ");
 	scanf("%d", &numeros);
 	preenche(vetor);
 	for(i = 0; i < numeros; i++)
 	{
-		printf("\nDigite o numero %d: ", i+1);
+		printf("\nDigite o numero %d do vetor: ", i+1);
 		scanf("%d", &vetor[i]);
 		getchar();
 
@@ -59,6 +59,6 @@ int main ()
 		}
 	}
 	soma = (som(vetor, i));
-	printf("\nA media dos numeros e: %.1f", med(soma, p));
+	printf("\nA media eh: %.1f", med(soma, p));
 	return 0;
 }
