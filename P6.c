@@ -3,62 +3,36 @@
 
 #include <stdio.h>
 
-int som(int vetor[20], int aux)
-{
-	if(aux == 0)
-		return 0;
-	else 
-	{
-		int somatorio = 0;
+float media(int soma, float n){
+	float d;
+	d = soma/n;
+	return d;
+}
 
-		somatorio = soma(vetor, aux - 1);
-		
-		if(vetor[aux - 1] > 0)
-		{
-			somatorio =+ vetor[aux - 1];
-		}
-		
-		return somatorio;
+int soman(int v[20], int k) {
+   	int i, soma=0;
+   	for (i=0;i<k;i++)
+    {
+    	soma+=v[i];
 	}
-}
-
-float med(int soma, float termos)
-{
-	float resultado;
-
-	resultado = soma / termos;
-
-	return resultado;
-}
-
-void preenche(int vetor[20])
-{
-	int i = 0;
-	for(i = 0; i < 20; i++)
-	{
-		vetor[i] = 0;
-	}
-}
-
-int main ()
-{
-	int vetor[20], i, soma, numeros;
-	float p;
-	printf("Digite a quantidade de numeros inteiros: ");
-	scanf("%d", &numeros);
-	preenche(vetor);
-	for(i = 0; i < numeros; i++)
-	{
-		printf("\nDigite o numero %d do vetor: ", i+1);
-		scanf("%d", &vetor[i]);
+      return (soma);}
+      
+int main(){
+	
+	int num[20],soma,i,n;
+	do{
+		printf("Preencher seu vetor de quantos numeros? (5~20)\n");
+		scanf("%d",&n);
+		}while(n<5||n>20);
+		
+	for(i=0; i<20; i++){
+		num[i] = 0;}
+	for(i=0; i<n; i++){
+		printf("%do numero: ", i+1);
+		scanf("%d", &num[i]); 
 		getchar();
-
-		if(vetor[i] != 0)
-		{
-			p++;
-		}
 	}
-	soma = (som(vetor, i));
-	printf("\nA media eh: %.1f", med(soma, p));
+	soma = (soman(num, i));
+	printf("\nMedia dos %d numeros: %f",n, media(soma, n));
 	return 0;
 }
