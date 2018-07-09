@@ -19,18 +19,18 @@ struct produto
 	struct dimensao end;
 };
 void cadastro(struct produto vet_produto[], int i){
-	printf("\nNome:");
+	printf("\nDigite o nome:");
 	fgets(vet_produto[i].nome, 64, stdin);
-	printf("\nPreco:");
+	printf("\nDigite o preco:");
 	scanf("%f", &vet_produto[i].preco);
 	getchar();
-	printf("\nLargura:");
+	printf("\nDigite a largura:");
 	scanf("%f", &vet_produto[i].end.largura);
 	getchar();
-	printf("\nProfundidade:");
+	printf("\nDigite a profundidade:");
 	scanf("%f", &vet_produto[i].end.profundidade);
 	getchar();
-	printf("\nAltura:");
+	printf("\nDigite a altura:");
 	scanf("%f", &vet_produto[i].end.altura);
 	getchar();
 }
@@ -41,7 +41,7 @@ void pesquisa(struct produto vet_produto[], int i){
 		printf("\nProduto nao cadastrado!");
 	}
 	else{
-		printf("%s R$ %.2f L: %gm x P: %.2fm x A: %.2fm",vet_produto[i].nome, vet_produto[i].preco, vet_produto[i].end.largura, vet_produto[i].end.profundidade, vet_produto[i].end.altura);
+		printf("\n %s, R$ %.2f, L: %.2fm x P: %.2fm x A: %.2fm",vet_produto[i].nome, vet_produto[i].preco, vet_produto[i].end.largura, vet_produto[i].end.profundidade, vet_produto[i].end.altura);
 	}
 }
 int main()
@@ -51,13 +51,13 @@ int main()
 	strcpy(vet_produto[0].nome, " ");
 	strcpy(vet_produto[1].nome, " ");
 	do{
-	printf("1 - Cadastro\n2 - Consulta\n3 - Sair\n\nDigite uma opcao: ");
+	printf("\n\n1 - Cadastro\n2 - Consulta\n3 - Sair\n\nDigite uma opcao: ");
 	scanf("%d", &opcao);
 	getchar();  
 	switch(opcao)
 	{
 		case 1: 
-			printf("\nEscolha o produto numero do produto:");
+			printf("\nEscolha o produto 1 ou 2:");
 			scanf("%d", &produto);
 			getchar();
 			switch(produto){
@@ -101,7 +101,6 @@ int main()
 		default: 
 			break;
 	}	
-	printf("\n\n");
 	}while(opcao != 4);
 	return 0;
 }
