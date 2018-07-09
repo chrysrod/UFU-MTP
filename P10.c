@@ -1,10 +1,6 @@
 //Nome: Chrystian Rodrigues Campos
 //Matricula: 11721ECP006
 
-//Matheus Cleber Silva Guerra
-//11721ECP009 
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
